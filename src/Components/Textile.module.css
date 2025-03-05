@@ -1,0 +1,89 @@
+/* Ensuring that .container and its child elements are properly centered and responsive */
+.container {
+    width: 60%;
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Styling for rows of smaller images to wrap on smaller screens */
+.smallRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%; /* Full width to utilize space */
+    gap: 20px; /* Spacing between items */
+    margin-top: 20px; /* Top margin for visual separation */
+}
+
+/* Adjusting .small for better mobile responsiveness */
+.small {
+    width: calc(33.333% - 20px); /* Three items per row with gap */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for .bigRow */
+.bigRow {
+    width: 100%; /* Full width for consistency */
+    margin: 0 auto; /* Center aligning */
+}
+
+/* Ensuring full width images in big rows have appropriate bottom margin */
+.fullWidth {
+    width: 100%; /* Full width for large images */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Specific styles for the first small image to take up more space if necessary */
+.small1 {
+    flex-grow: 2; /* Allows it to take twice the space if there are space disparities */
+}
+
+/* Ensuring small2 and small3 are equally sized */
+.small2, .small3 {
+    flex: 1; /* Equal flex basis without grow or shrink */
+}
+
+/* Styling for the header within the component */
+.headerTitle {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    color: black;
+    font-weight: lighter;
+    font-style: normal;
+    width: 100%; /* Full width for better mobile responsiveness */
+    margin: 0 auto; /* Center aligning */
+    font-size: 20px; /* Appropriate font size for readability */
+    margin-bottom: 50px; /* Space below the title for clarity */
+}
+
+/* Ensuring all images are responsive and visually appealing */
+.bigImage, .smallImage {
+    width: 100%; /* Full width to ensure responsiveness */
+    height: auto; /* Auto height for maintaining aspect ratio */
+    object-fit: contain; /* Fit the content without cutting */
+    border: 0.7px solid #373737;
+    border-radius: 0.5%;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+/* Media queries for adjusting layout on different device sizes */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .small {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+
+    .headerTitle {
+        font-size: 18px; /* Slightly smaller font size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .small {
+        width: 100%; /* Full width for each item on very small screens */
+    }
+}

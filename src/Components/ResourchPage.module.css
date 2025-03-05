@@ -1,0 +1,58 @@
+/* src/components/ResourcePage.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 20px; /* Space between sections */
+    padding: 10px 0; /* Padding around the container */
+    box-sizing: border-box;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.headerContainer {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px; /* Provides spacing between the header text and the images */
+}
+
+.productContainer {
+    width: 80%; /* Take full width of its container */
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    border: 2px black solid;
+} 
+
+.image {
+    width: 100%; /* Limits width to the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image is scaled correctly within the element's box */
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: 10px; /* Space below the title for clarity */
+}
+
+
+
+@media (max-width: 768px) {
+    .productContainer {
+        width: 100%; /* Full width on smaller screens */
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+
+    .image {
+        max-height: 60vh; /* Smaller max height on mobile to accommodate screen size */
+    }
+}

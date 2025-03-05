@@ -1,0 +1,71 @@
+/* src/components/AboutMe.module.css */
+
+.aboutMeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.content {
+  width: 100%; /* Use full width to maximize space */
+  max-width: 50%; /* Limit maximum width for larger screens */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for depth */
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000000;
+}
+
+p {
+  color: #333;
+  text-align: justify;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.3rem;
+  font-family: "Inconsolata", monospace;
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+.image {
+  width: 100%; /* Ensures image scales with the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image is scaled correctly within the element's box */
+  border-radius: 0.5%;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+
+/* Adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+  .content {
+    max-width: 80%; /* Increases max width for better readability on smaller devices */
+  }
+
+  .linkText {
+    font-size: large; /* Adjust font size for better readability */
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+  .content {
+    max-width: 90%; /* Further increase max width on very small screens */
+  }
+
+  .linkText {
+    font-size: medium; /* Further adjust font size for mobile screens */
+  }
+
+  p {
+    font-size: 0.875rem; /* Standard size for mobile readability */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Larger title on small screens */
+  }
+}

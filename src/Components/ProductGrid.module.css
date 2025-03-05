@@ -1,0 +1,57 @@
+/* Grid Container */
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between the cards */
+  padding: 60px;
+  margin: 0 auto;
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1300px; 
+}
+
+/* Product Card */
+.productCard {
+  background-color: black;
+  width: 400px; /* Fixed width for each card */
+  padding: 1.5px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Black shadow around each card */
+  transition: transform 0.3s ease-in-out;
+}
+
+.productCard:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Product Image */
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.collectionRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ensures even spacing */
+  margin-bottom: 20px;
+}
+
+.collectionItem {
+  flex: 1 1 48%; /* Each item takes nearly half the row, adjusting for margin/padding */
+  margin: 1%; /* Provides a small gap between items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background-color: black;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.collectionImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

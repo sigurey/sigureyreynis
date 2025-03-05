@@ -1,0 +1,57 @@
+/* src/components/IndexPage.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Space between sections */
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px; /* Provides spacing between the header text and the images */
+}
+
+.half {
+    flex: 1; /* Flex each half equally */
+    width: 100%; /* Take full width of its container */
+    background-color: lightgray; /* For visibility */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    border: 0.7px solid #373737;
+    overflow: hidden; /* Ensures nothing spills out */
+}
+
+.image {
+    max-width: 100%; /* Limits width to the container's width */
+    max-height: 80vh; /* Limits height to 80% of the viewport height */
+    object-fit: contain; /* Ensures the image is scaled correctly within the element's box */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.title, .headerTitle {
+    font-size: 22px;
+    margin-bottom: 10px; /* Space below the title for clarity */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .half {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height automatically on smaller screens */
+    }
+
+    .image {
+        max-width: 100%; /* Allow full width on smaller screens */
+        max-height: 40vh; /* Smaller max height on mobile to accommodate screen size */
+    }
+}

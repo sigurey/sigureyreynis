@@ -1,0 +1,66 @@
+/* Existing CSS */
+
+.productDetailsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.productTitle {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.productDescription {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Playfair Display", system-ui;
+  text-align: center;
+  padding: 20px;
+}
+
+.productPrice {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.imagesRow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.productImage {
+  width: calc(33.33% - 20px);
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+  .productImage {
+    width: 100%; /* Full width on small screens */
+  }
+  
+  .imagesRow {
+    gap: 10px; /* Optional: Reduce gap for smaller screens */
+  }
+  
+  .productDetailsContainer {
+    padding: 10px; /* Optional: Reduce padding on smaller screens */
+  }
+  
+  .productTitle {
+    font-size: 1.5rem; /* Optional: Adjust font size */
+  }
+  
+  .productDescription {
+    font-size: x-large;
+    font-family: "Playfair Display", system-ui;
+  }
+  
+  .productPrice {
+    font-size: 1.2rem; /* Optional: Adjust font size */
+  }
+}

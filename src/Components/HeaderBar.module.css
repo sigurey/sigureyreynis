@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(60%)
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  width: 100%;;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.productCard {
+  flex: 1 1 29%; /* This will make sure two cards fit within the width of the container */
+  max-width: 100%; /* Max-width should match flex-basis for consistent layout */
+  margin: 1%; /* Provides spacing between cards */
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: reverse(20%);
+  align-items: center;
+}
+
+.productDescription {
+  font-size: 2ch;
+  font-weight: 300;
+  font-family: "Inconsolata", monospace;
+  align-self: center; /* Ensure text is centered */
+  width: 100%; /* Confirm it spans the full width of its container */
+  margin: auto; /* Centers the block if it does not naturally fill its container */
+}
+
+
+.selectedProduct {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  border: black 4px solid;
+}
+
+
+.collectionRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.collectionItem {
+  flex: 1 1 33%; /* Adjust based on content */
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collectionImage {
+  width: 100%;
+  max-height: 140vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    flex-wrap: nowrap; /* Prevents wrapping */
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto; /* Allows horizontal scrolling */
+  }
+
+  .productCard {
+    margin: 0 auto;
+    flex: 0 0 29%; /* Each takes up 29% of the container's width */
+    max-width: 29%; /* Ensures no card grows beyond this */
+  }
+
+  .collectionItem {
+    margin: 0 auto;
+    flex: 0 0 100%; /* Each item takes the full width of the container */
+    max-width: 100%; /* Ensures no item grows beyond this */
+  }
+
+  .collectionRow {
+    margin: 0 auto;
+    flex-direction: column; /* Stacks collection items vertically */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productContainer {
+    flex-wrap: nowrap; /* Keeps items in a single row */
+  }
+
+  .p {
+    font-size: 1rem;
+  }
+
+  .productCard {
+    margin: 0 auto;
+    flex: 0 0 100%; /* Each item takes the full width of the container */
+    max-width: 100%; /* Ensures no card grows beyond this */
+  }
+
+  .collectionItem {
+    margin: 0 auto;
+    flex: 0 0 100%; /* Each item takes the full width of the container */
+    max-width: 100%; /* Ensures no item grows beyond this */
+  }
+
+  .collectionRow {
+    margin: 0 auto;
+    flex-direction: column; /* Ensures collection items stack vertically */
+  }
+}
