@@ -95,7 +95,7 @@ const HeaderBar = () => {
         {products.map((product) => (
           <div key={product.id} className={styles.productCard} onClick={() => handleProductClick(product)}>
             <img src={product.image} alt={product.name} className={`${styles.productImage} ${selectedProductId === product.id ? styles.selectedProduct : ''}`} />
-            <div className={styles.productDescription}><p style={{ textAlign: 'center' , width:'100%' }}>{product.description}</p></div>
+            <div className={styles.productDescription}><p style={{ textAlign: 'center' , width:'100%', paddingLeft:'15px' }}>{product.description}</p></div>
           </div>
         ))}
       </div>

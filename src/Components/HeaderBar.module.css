@@ -35,7 +35,7 @@
   font-family: "Inconsolata", monospace;
   align-self: center; /* Ensure text is centered */
   width: 100%; /* Confirm it spans the full width of its container */
-  margin: auto; /* Centers the block if it does not naturally fill its container */
+  margin: 0 auto; /* Centers the block if it does not naturally fill its container */;
 }
 
 
