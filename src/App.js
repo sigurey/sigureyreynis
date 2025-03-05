@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ProductDetailsPage from './Components/ProductDetailsPage';
 import AboutMe from './Components/AboutMe';
+import IndexPage from './Components/indexPage';
 import Footer from './Components/footer';
 import Header from './Components/Header';
 import ResourcePage from './Components/ResourchPage';
