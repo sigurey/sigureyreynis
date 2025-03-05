@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sigureyreynis/static/css/main.320b49d1.css",
+    "main.js": "/sigureyreynis/static/js/main.f264c428.js",
+    "index.html": "/sigureyreynis/index.html",
+    "main.320b49d1.css.map": "/sigureyreynis/static/css/main.320b49d1.css.map",
+    "main.f264c428.js.map": "/sigureyreynis/static/js/main.f264c428.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.320b49d1.css",
+    "static/js/main.f264c428.js"
+  ]
+}
