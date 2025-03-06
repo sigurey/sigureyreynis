@@ -2,7 +2,7 @@
   "name": "sigurey",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://sigurey.github.io/sigureyreynis",
+  "homepage": "https://sigureyreynis.is",
   "scripts": {
     "start": "BROWSER=chrome react-scripts start",
     "build": "react-scripts build",
